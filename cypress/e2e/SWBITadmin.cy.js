@@ -20,13 +20,13 @@ describe('template spec', () => {
     // USERS Icon/Nav
     cy.get('.address > span', customTimeout).contains('Please be patient while data is loaded completely')
     cy.wait(120000)
-    cy.get('.users > .menu-item > .menu-item-icon').click()
+    // cy.get('.users > .menu-item > .menu-item-icon').click()
 
-   // cy.get('span[title="Users"]', customTimeout).click()
+   cy.get('span[title="Users"]', customTimeout).click()
  
    // User Name & Password
     cy.get(':nth-child(2) > .recommended-input', customTimeout)
-    .type('TESTR12s')
+    .type('WinonnaJanexs')
     cy.get(':nth-child(3) > .recommended-input', customTimeout)
     .type('rivero123')
     
@@ -62,18 +62,13 @@ describe('template spec', () => {
   cy.get('.dropdown-menu.open').find('a')
   .contains('Specialist').click()
 
+cy.wait(3000)
+  cy.get('.item-with-add-button > .btn-group > .btn', customTimeout).should('be.visible').click()
+    cy.get('.item-with-add-button > .btn-group > .open > .dropdown-menu > [data-original-index="2"] > a', customTimeout).should('be.visible').click()
+    cy.get('.item-with-add-button > .groupxs-btn', customTimeout).should('be.visible').click()
 
-  // // Groups Add group
-  // cy.get('.item-with-add-button > .btn-group > .open > .dropdown-menu > [data-original-index="0"] > a > .text').click()
-  // cy.get('.dropdown-menu.open').find('a')
-  // .contains('Just alexander.knauer@stadtwerke-bayreuth.de (PUf6huwM)').click()
-  
- 
-  // cy.get('.item-with-add-button > .btn-group > .btn > .filter-option').click()
-  // cy.get('.dropdown-menu.inner',customTimeout).find('a')
-  // .contains('Just alexander.knauer@stadtwerke-bayreuth.de (PUf6huwM)').click()
 
-  //Save button
+  //Save buttons
  
   cy.get('button[type="button"]', customTimeout).contains('Save').click()
   
