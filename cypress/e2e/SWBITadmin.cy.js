@@ -5,7 +5,7 @@ describe('SWBT ADMIN', () => {
   const customTimeout = {timeout : 10000000}
   it('Create Users', () => {
 
-    // Verifying the link
+    // Verifying the linkk
     cy.wait(3000)
     cy.visit('https://swbt-43857.alpha.reportheld-saas.com/admin/main.html#login')// launch the site
     cy.wait(3000) // this function  is needed for this website to wait to load and not fail
